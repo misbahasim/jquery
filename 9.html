@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class methods</title>
+    <style>
+        #box {
+            height: 100px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .first {
+            background-color: teal;
+        }
+
+        .second {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery Class Methods</h1>
+    <div id="box">
+        <h2>Test box 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam
+            quae, enim laudantium perferendi
+        </p>
+    </div><br>
+    <button id="addbtn">Add Class</button>
+    <button id="removebtn">Remove Class</button>
+    <button id="togglebtn">Toggle Class</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#addbtn").click(function () {
+                $("#box,h1").addClass("first second");
+            });
+            $("#removebtn").click(function () {
+                $("#box").removeClass("second");
+            });
+            $("#togglebtn").click(function () {
+                $("#box").toggleClass("second");
+            });
+        });
+    </script>
+</body>
+
+</html>

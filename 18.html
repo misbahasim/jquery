@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            padding: 10px;
+            border: 1px solid black;
+            background: lightgreen;
+        }
+
+        .test {
+            background: lightsalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery wrap() & unwrap() Methods</h1>
+    <div id="box">
+        <h2>Test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+            laudantium perferendis.</p>
+    </div><br>
+    <button id="wrapBtn">Wrap</button>
+    <button id="unwrapBtn">Unwrap</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#wrapBtn").click(function () {
+                $("#box p").wrap('<div class="test"></div>');
+                // $("#box p").wrap("<h2></h2>");
+            });
+            $("#unwrapBtn").click(function () {
+                $("#box p").unwrap();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            padding: 20px;
+            border: 1px solid black;
+            background: lightgreen;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery position() & offset() Methods</h1>
+    <div id="box">
+        <h2>Test box</h2>
+        <p>See the console. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam
+            quae, enim laudantium perferendis.
+        </p>
+    </div>
+    <button id="positionBtn">Position</button>
+    <button id="offsetBtn">Offset</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#positionBtn").click(function () {
+                // var a = $("#box").position();
+                var a = $("#box h2").position();
+                console.log("Top: " + a.top + " LEFT: " + a.left);
+            });
+            $("#offsetBtn").click(function () {
+                var a = $("#box h2").offset();
+                // var a = $("#box h2").offset();
+                console.log(a);
+                // $("#box").offset({ top: 0, left: 0 });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            height: 250px;
+            width: 450px;
+            padding: 10px;
+            background-color: lavender;
+            border: 3px solid plum;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery event.preventDefault Method</h1>
+    <div id="box">
+        <a href="https://misbahasim.github.io/simplesite/" id="result">Simple site (prevent default)</a>
+        <br> <br>
+        <a href="https://misbahasim.github.io/simplesite/">Simple site</a>
+    </div>
+    <h2></h2>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#result").on("click", function (event) {
+                event.preventDefault(); //used on anchor and buttons
+
+                var a = event.isDefaultPrevented();
+                $("h2").html(a);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

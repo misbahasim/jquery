@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            height: 250px;
+            width: 450px;
+            padding: 10px;
+            background-color: lavender;
+            border: 3px solid plum;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery event.target Property</h1>
+    <div id="box">
+        <h2>Test box</h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod esse, reiciendis iusto autem molestiae illum.
+            Fugiat neque necessitatibus ut magnam iste, tempora aliquam eum rerum aperiam officiis perspiciatis,
+            repellat cupiditate.
+        </p>
+        <button>Test button</button>
+    </div>
+    <h2 id="result">click the div, h2, para, button</h2>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#box").on("click", function (event) {
+                // $("#result").html("Target Element : " + event.target); 
+                // $("#result").html("Target Element : " + event.target.nodeName);
+                $("#result").html("Target Element : " + event.target.innerHTML);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

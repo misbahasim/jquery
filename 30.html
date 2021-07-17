@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #result {
+            height: 200px;
+            width: 400px;
+            background-color: mistyrose;
+            border: 3px solid pink;
+        }
+
+        #box {
+            height: 50px;
+            width: 50px;
+            border: 1px solid cyan;
+            background: lightcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery pageX and pageY Property</h1>
+    <div id="result"></div>
+    <div id="box"></div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).mousemove(function (event) {
+                $("#result").text("X:" + event.pageX + " Y:" + event.pageY);
+
+                var x = event.pageX;
+                var y = event.pageY;
+                $("#box").offset({ top: y, left: x });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

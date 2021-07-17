@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+
+<body>
+    <h1>Hello World : jQuery Form Events</h1>
+    <form action="" id="sform">
+        Name : <input type="text" id="sname"> <br> <br>
+        Class : <input type="text" id="sclass"> <br> <br>
+        Country : <select id="scountry">
+            <option value="Pakistan">Pakistan</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Nigeria">Nigeria</option>
+        </select> <br> <br>
+        <input type="submit" value="Click me">
+    </form>
+    <p class="test"></p>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#sname,#sclass,#scountry").focus(function () {
+                $(this).css("background-color", "lime");
+            });
+            $("#sname,#sclass,#scountry").blur(function () {
+                $(this).css("background-color", "white");
+            });
+            $("#sname,#sclass").select(function () {
+                $(this).css("background-color", "yellow"); //works only for input when something is selected inside it  
+            });
+            $("#scountry").change(function () {
+                // $(this).css("background-color", "pink");
+                var a = $(this).val();
+                $(".test").html(a);
+            });
+            $("#sform").submit(function () {
+                var name = $("#sname").val();
+                var stuclass = $("#sclass").val();
+                var country = $("#scountry").val();
+                alert("Form has been submitted, values you entered: " + name + " " + stuclass + " " + country);
+            });
+        });
+    </script>
+</body>
+
+</html>

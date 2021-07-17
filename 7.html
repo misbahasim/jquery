@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get methods</title>
+    <style>
+        #box {
+            height: 200px;
+            width: 200px;
+            background-color: gainsboro;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery Get Methods</h1>
+    <div id="box" class="test abc">
+        <h2>Test box 2</h2>
+        <p>SEE the console, Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam
+            quae, enim laudantium perferendi
+        </p>
+    </div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var a = $("#box").html();
+            console.log("This is html :" + a);
+            var b = $("#box").text();
+            console.log("This is text :" + b);
+            var c = $("#box").attr("class");
+            console.log("This is attribute with class : " + c);
+        });
+    </script>
+</body>
+
+</html>

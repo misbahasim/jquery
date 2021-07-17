@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            padding: 10px;
+            border: 1px solid black;
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery replaceWith() & replaceAll() Methods</h1>
+    <div id="box">
+        <h2>Test box 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+            laudantium perferendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+            laudantium perferendis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+            laudantium perferendis.</p>
+    </div><br>
+    <button id="replaceBtn">Replace</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#replaceBtn").click(function () {
+                // $("#box p:first").replaceWith("<h4>Has been replaced</h4>");
+                // $("#box p:nth-child(3)").replaceWith("Has been replaced");
+                // $("<h4>Has been replaced</h4>").replaceAll("#box p");
+                $("<h4>Has been replaced</h4>").replaceAll("#box p:first");
+                // $("Has been replaced").replaceAll("#box p:first"); won't work
+            });
+        });
+    </script>
+
+</body>
+
+</html>

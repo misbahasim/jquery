@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append and prepend methods</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery append & prepend Methods</h1>
+    <div id="box">
+        <h2>Test box 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+            laudantium perferendis.</p>
+    </div><br>
+    <button id="appendBtn">Append Box</button>
+    <button id="prependBtn">Prepend Box</button>
+
+    <ol id="list">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Peach</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Plum</li>
+        <li>Apricot</li>
+    </ol><br>
+    <button id="appendListBtn">Append List</button>
+    <button id="prependListBtn">Prepend List</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#appendBtn").click(function () {
+                $("#box").append("<h3>Hello World</h3>");
+            });
+            $("#prependBtn").click(function () {
+                $("#box").prepend("<h3>Hello World</h3>");
+            });
+
+            $("#appendListBtn").click(function () {
+                $("ol").append("<li>List Item New</li>");
+            });
+            $("#prependListBtn").click(function () {
+                $("ol").prepend("<li>New List Item</li>");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

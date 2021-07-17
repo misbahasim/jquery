@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            height: 250px;
+            width: 450px;
+            padding: 10px;
+            background-color: lightyellow;
+            border: 3px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery event.data Property</h1>
+    <div id="box">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat neque necessitatibus ut magnam iste,
+            tempora
+        </p>
+        <p>Quod esse, reiciendis iusto autem molestiae illum. Fugiat neque necessitatibus ut magnam iste, tempora
+            aliquam eum rerum aperiam officiis perspiciatis, repellat cupiditate.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quaerat dicta, aspernatur a quia consectetur
+            iure recusandae sapiente, dolores nemo, nisi eum illo. A maiores eos non aut esse molestiae!
+        </p>
+    </div>
+    <h2 id="result">click the para</h2>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('p').each(function (i) {
+                $(this).on("click", { value: i }, function (event) {
+                    alert(event.data.value);
+                })
+            });
+        });
+        // when the page is loaded each will assign number to every paragraph and embed a click event on it
+    </script>
+
+</body>
+
+</html>

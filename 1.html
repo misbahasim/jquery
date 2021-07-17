@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            padding: 0 5px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        #test1 {
+            background-color: blanchedalmond;
+        }
+
+        #test2 {
+            background-color: darkorange;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="test1">
+        <h2>Testbox 1</h2>
+        <p>Testing jquery</p>
+    </div>
+    <div id="test2">
+        <h2>Testbox 2</h2>
+        <p>See the console</p>
+    </div>
+    <!-- Basic syntax
+    $(selector).action(); -->
+
+</body>
+<script>
+    $(document).ready(function () {
+        var a = $("#test1").html();
+        console.log(a);
+
+        var b = $("#test2").html();
+        console.log(b);
+    });
+</script>
+
+</html>

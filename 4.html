@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard events</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            background-color: burlywood;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery Keyboard Events</h1>
+    <div id="box">
+        <h2>Test box 2</h2>
+        <p>body background-color change on keypress, keydown and keyup.</p>
+    </div>
+</body>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("body").keypress(function () {
+            $(this).css("background-color", "green");
+        });
+        $("body").keydown(function () {
+            $(this).css("background-color", "green");
+        });
+        $("body").keyup(function () {
+            $(this).css("background-color", "blue");
+        });
+    });
+</script>
+
+</html>

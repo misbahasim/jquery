@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            padding: 10px;
+            border: 1px solid black;
+            background: lightgreen;
+        }
+
+        .test {
+            color: lightsalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery wrapAll() & wrapInner() Methods</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+        laudantium perferendis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+        laudantium perferendis.</p>
+    <br>
+    <button id="wrapallBtn">Wrap All</button>
+    <button id="wrapinnerBtn">Wrap Inner</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#wrapallBtn").click(function () {
+                $("p").wrapAll('<div id="box"></div>');
+            });
+            $("#wrapinnerBtn").click(function () {
+                $("h1").wrapInner('<span class="test"></span>');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

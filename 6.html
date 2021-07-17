@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window events</title>
+    <style>
+        #box {
+            height: 200px;
+            width: 200px;
+            background-color: gainsboro;
+            overflow: auto;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery Window Events</h1>
+    <div id="box">
+        <h2>Test box 2</h2>
+        <p>See the console when the div is scrolled and the window is resized.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+            laudantium perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo porro veniam vero
+            excepturi earum id ratione non. Eveniet modi quasi libero adipisci autem dicta nulla sint incidunt cumque
+            nisi.
+        </p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae, enim
+        laudantium perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo porro veniam vero
+        excepturi earum id ratione non. Eveniet modi quasi libero adipisci autem dicta nulla sint incidunt cumque
+        nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae,
+        enim
+        laudantium perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo porro veniam vero
+        excepturi earum id ratione non. Eveniet modi quasi libero adipisci autem dicta nulla sint incidunt cumque
+        nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae,
+        enim
+        laudantium perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo porro veniam vero
+        excepturi earum id ratione non. Eveniet modi quasi libero adipisci autem dicta nulla sint incidunt cumque
+        nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam quae,
+        enim
+        laudantium perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo porro veniam vero
+        excepturi earum id ratione non. Eveniet modi quasi libero adipisci autem dicta nulla sint incidunt cumque
+        nisi.
+    </p>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#box").scroll(function () {
+                console.log("You are scrolling the div");
+            });
+            $(window).resize(function () {
+                console.log("You are resizing the window");
+            });
+        });
+    </script>
+</body>
+
+</html>

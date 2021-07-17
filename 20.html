@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jquery</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #box {
+            padding: 20px;
+            margin: 10px;
+            border: 10px solid black;
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World : jQuery width & height Methods</h1>
+    <div id="box">
+        <h2>Test box</h2>
+        <p>See the console. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis dolor ut aliquam
+            quae, enim laudantium perferendis.
+        </p>
+    </div>
+    <button id="widthBtn">Width</button>
+    <button id="heightBtn">Height</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#widthBtn").click(function () {
+                $("#box").width("400px");
+                // can be used for image, table, etc
+                console.clear();
+                console.log("Width: " + $("#box").width());
+                console.log("Inner Width: " + $("#box").innerWidth());
+                console.log("Outer Width: " + $("#box").outerWidth());
+                console.log("outerWidth(true): " + $("#box").outerWidth(true));
+            });
+            $("#heightBtn").click(function () {
+                $("#box").height("400px");
+                console.clear();
+                console.log("Height: " + $("#box").height());
+                console.log("Inner Height: " + $("#box").innerHeight());
+                console.log("Outer Height: " + $("#box").outerHeight());
+                console.log("outerHeight(true): " + $("#box").outerHeight(true));
+            });
+        });
+    </script>
+
+</body>
+
+</html>
