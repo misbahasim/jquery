@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 4px 0;
+        }
+
+        .error_form {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+        <form action="#" method="get" id="registration_form">
+            <div>
+                <label for="">First Name</label><br>
+                <input type="text" id="fname" required>
+                <span class="error_form" id="fname_err_msg"></span>
+            </div>
+            <div>
+                <label for="">Second Name</label><br>
+                <input type="text" id="sname" required>
+                <span class="error_form" id="sname_err_msg"></span>
+            </div>
+            <div>
+                <label for="">Email id</label><br>
+                <input type="email" id="mail" required>
+                <span class="error_form" id="email_err_msg"></span>
+            </div>
+            <div>
+                <label for="">Password</label><br>
+                <input type="password" id="password" required>
+                <span class="error_form" id="password_err_msg"></span>
+            </div>
+            <div>
+                <label for="">Re-enter Password</label><br>
+                <input type="password" id="retype_password" required>
+                <span class="error_form" id="retype_password_err_msg"></span>
+            </div>
+            <div>
+                <input type="submit" value="Send">
+            </div>
+        </form>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="validate.js"></script>
+</body>
+
+</html>
